@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ar" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>الحروف العربية</title>
+    <style media="screen">
+      body {
+        margin: 0px;
+        padding: 0px;
+      }
+      div {
+        border: 2px solid rgb(14, 105, 241);
+        padding: 10px;
+        width: 420px;
+        margin: 40px 0px 0px 400px;
+      }
+      input {
+        font-size: 24px;
+        font-weight: bold;
+        width: 60px;
+        margin: 10px;
+      }
+      h1 {
+        background-color: teal;
+        text-align: center;
+        padding: 10px;
+        font-size: 45px;
+        color: white;
+      }
+      h2 {
+        text-align: center;
+      }
+      footer {
+        text-align: center;
+        margin-top: 20px;
+        color: gray;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>تطبيق نطق الحروف العربية</h1>
+    <div>
+      <h2>
+        <a href="english.html">
+            <button>En</button>
+        </a>
+        اضغط على الحرف للنطق</h2>
+      <form id="alphabetForm" method="post">
+        <input type="button" name="a" value="أ" onclick="playVideo('أ.m4a')">
+        <input type="button" name="b" value="ب" onclick="playVideo('ب.m4a')">
+        <input type="button" name="c" value="ت" onclick="playVideo('ت.m4a')">
+        <input type="button" name="d" value="ث" onclick="playVideo('ث.m4a')">
+        <input type="button" name="e" value="ج" onclick="playVideo('ج.m4a')">
+        <input type="button" name="f" value="ح" onclick="playVideo('ح.m4a')">
+        <input type="button" name="g" value="خ" onclick="playVideo('خ.m4a')">
+        <input type="button" name="h" value="د" onclick="playVideo('د.m4a')">
+        <input type="button" name="i" value="ذ" onclick="playVideo('ذ.m4a')">
+        <input type="button" name="j" value="ر" onclick="playVideo('ر.m4a')">
+        <input type="button" name="k" value="ز" onclick="playVideo('ز.m4a')">
+        <input type="button" name="l" value="س" onclick="playVideo('س.m4a')">
+        <input type="button" name="m" value="ش" onclick="playVideo('ش.m4a')">
+        <input type="button" name="n" value="ص" onclick="playVideo('ص.m4a')">
+        <input type="button" name="o" value="ض" onclick="playVideo('ض.m4a')">
+        <input type="button" name="p" value="ط" onclick="playVideo('ط.m4a')">
+        <input type="button" name="q" value="ظ" onclick="playVideo('ظ.m4a')">
+        <input type="button" name="r" value="ع" onclick="playVideo('ع.m4a')">
+        <input type="button" name="s" value="غ" onclick="playVideo('غ.m4a')">
+        <input type="button" name="t" value="ف" onclick="playVideo('ف.m4a')">
+        <input type="button" name="u" value="ق" onclick="playVideo('ق.m4a')">
+        <input type="button" name="v" value="ك" onclick="playVideo('ك.m4a')">
+        <input type="button" name="w" value="ل" onclick="playVideo('ل.m4a')">
+        <input type="button" name="x" value="م" onclick="playVideo('م.m4a')">
+        <input type="button" name="y" value="ن" onclick="playVideo('ن.m4a')">
+        <input type="button" name="z" value="ه" onclick="playVideo('ه.m4a')">
+        <input type="button" name="y" value="و" onclick="playVideo('واو.m4a')">
+        <input type="button" name="z" value="ى" onclick="playVideo('ي.m4a')">
+      </form>
+      <video id="alphabetVideo" type="video/m4a" controls autoplay hidden></video>
+    </div>
+
+    <footer>
+        &copy; 2024 Samya Elekrady.
+      </footer>
+    <script>
+      function playVideo(videoSource) {
+        var video = document.getElementById("alphabetVideo");
+        video.src = "alphabet/arabic/" + videoSource;
+        video.load();
+        video.play();
+      }
+    </script>
+  </body>
+</html>

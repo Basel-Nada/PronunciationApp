@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ar" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>الحروف العربية</title>
+    <style media="screen">
+      body {
+        margin: 0px;
+        padding: 0px;
+      }
+      div {
+        border: 2px solid rgb(14, 105, 241);
+        padding: 10px;
+        width: 420px;
+        margin: 40px 0px 0px 400px;
+      }
+      input {
+        font-size: 24px;
+        font-weight: bold;
+        width: 60px;
+        margin: 10px;
+      }
+      h1 {
+        background-color: teal;
+        text-align: center;
+        padding: 10px;
+        font-size: 45px;
+        color: white;
+      }
+      h2 {
+        text-align: center;
+      }
+      footer {
+        text-align: center;
+        margin-top: 20px;
+        color: gray;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>English Alphabet Pronunciation App</h1>
+    <div>
+      <h2>Press the letter to pronounce
+        <a href="index.html">
+            <button>ع</button>
+          </a>
+      </h2>
+      <form id="alphabetForm" method="post">
+        <input type="button" name="a" value="A" onclick="playVideo('a.mp4')">
+        <input type="button" name="b" value="B" onclick="playVideo('b.mp4')">
+        <input type="button" name="c" value="C" onclick="playVideo('c.mp4')">
+        <input type="button" name="d" value="D" onclick="playVideo('d.mp4')">
+        <input type="button" name="e" value="E" onclick="playVideo('e.mp4')">
+        <input type="button" name="f" value="F" onclick="playVideo('f.mp4')">
+        <input type="button" name="g" value="G" onclick="playVideo('g.mp4')">
+        <input type="button" name="h" value="H" onclick="playVideo('h.mp4')">
+        <input type="button" name="i" value="I" onclick="playVideo('i.mp4')">
+        <input type="button" name="j" value="J" onclick="playVideo('j.mp4')">
+        <input type="button" name="k" value="K" onclick="playVideo('k.mp4')">
+        <input type="button" name="l" value="L" onclick="playVideo('l.mp4')">
+        <input type="button" name="m" value="M" onclick="playVideo('m.mp4')">
+        <input type="button" name="n" value="N" onclick="playVideo('n.mp4')">
+        <input type="button" name="o" value="O" onclick="playVideo('o.mp4')">
+        <input type="button" name="p" value="P" onclick="playVideo('p.mp4')">
+        <input type="button" name="q" value="Q" onclick="playVideo('q.mp4')">
+        <input type="button" name="r" value="R" onclick="playVideo('r.mp4')">
+        <input type="button" name="s" value="S" onclick="playVideo('s.mp4')">
+        <input type="button" name="t" value="T" onclick="playVideo('t.mp4')">
+        <input type="button" name="u" value="U" onclick="playVideo('u.mp4')">
+        <input type="button" name="v" value="V" onclick="playVideo('v.mp4')">
+        <input type="button" name="w" value="W" onclick="playVideo('w.mp4')">
+        <input type="button" name="x" value="X" onclick="playVideo('x.mp4')">
+        <input type="button" name="y" value="Y" onclick="playVideo('y.mp4')">
+        <input type="button" name="z" value="Z" onclick="playVideo('z.mp4')">
+      </form>
+      <video id="alphabetVideo" type="video/mp4" controls autoplay hidden></video>
+    </div>
+
+    <footer>
+        &copy; 2024 Samya Elekrady.
+      </footer>
+    <script>
+      function playVideo(videoSource) {
+        var video = document.getElementById("alphabetVideo");
+        video.src = "alphabet/english/" + videoSource;
+        video.load();
+        video.play();
+      }
+    </script>
+  </body>
+</html>
